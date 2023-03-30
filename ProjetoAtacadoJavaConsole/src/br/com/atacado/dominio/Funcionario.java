@@ -11,6 +11,8 @@ public class Funcionario extends PessoaFisica {
 
     private LocalDate dataContratacao;
 
+    private String raca;
+
     public String getMatricula() {
         return matricula;
     }
@@ -36,14 +38,18 @@ public class Funcionario extends PessoaFisica {
     }
 
     public LocalDate getDataContratacao() {
-        return dataContratacao();
+        return getDataContratacao();
     }
 
     public void setDataContratacao(LocalDate dataContratacao) {
         this.dataContratacao = dataContratacao;
     }
 
-    public Funcionario(String matricula, String login, String senha, LocalDate dataContratacao) {
+    public Funcionario(int codigoPessoa, String nome, String email, String site, LocalDate dataInclusao,
+            int cpf, int rg, String naturalidade, String sexo, String raca, String matricula, String login,
+            String senha, LocalDate dataContratacao) {
+        super(codigoPessoa, nome, email, site, dataInclusao, matricula, login, sexo, raca, senha, naturalidade, nome,
+                nome);
         this.matricula = matricula;
         this.login = login;
         this.senha = senha;
@@ -63,6 +69,14 @@ public class Funcionario extends PessoaFisica {
     @Override
     public String toString() {
         return "Funcionario [" +
+                "codigoPessoa =" + codigoPessoa +
+                "nome =" + nome +
+                "email =" + email +
+                "site =" + site +
+                "dataInclusao =" + dataInclusao +
+                "sexo =" + site +
+                "raca =" + raca +
+                "naturalidade =" + naturalidade +
                 "matricula=" + matricula +
                 ", login=" + login +
                 ", senha=" + senha +

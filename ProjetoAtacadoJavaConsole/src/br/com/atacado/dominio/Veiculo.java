@@ -1,6 +1,6 @@
 package br.com.atacado.dominio;
 
-import java.nio.file.DirectoryIteratorException;
+import java.time.LocalDate;
 
 public class Veiculo extends BaseTranporte {
 
@@ -33,10 +33,11 @@ public class Veiculo extends BaseTranporte {
         System.out.println("Placa Do Veiculo" + placa);
     }
 
-    public Veiculo(int codigoFrota, String placa) {
+    public Veiculo(int codigoFrota, String placa, LocalDate dataInser, String descricao, int codigo) {
+        super(codigo, descricao, dataInser);
         this.codigo = codigo;
         this.descricao = descricao;
-        this.dataInser = dataInser
+        this.dataInser = dataInser;
         this.codigoFrota = codigoFrota;
         this.placa = placa;
     }
