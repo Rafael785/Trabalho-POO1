@@ -8,13 +8,13 @@ public class PessoaFisica extends BasePessoa {
 
     private String rg;
 
-    protected String sexo;
+    private String sexo;
 
     private String raca;
 
     private String nacionalidade;
 
-    protected String naturalidade;
+    private String naturalidade;
 
     private String nomePai;
 
